@@ -38,6 +38,36 @@ export interface IOptionData {
   slPage: number; // 存读档界面所在页面
   textboxFont: textFont;
   language: language;
+  playSeEnter: string; // 鼠标进入音效
+  playSeEnterChoose: string; // 鼠标进入分支选择音效
+  playSeEnterTitleButton: string; // 鼠标进入标题按钮音效
+  playSeEnterOptionSelect: string; // 鼠标进入游戏选项切换按钮音效
+  playSeEnterMenuPanelSelect: string; // 鼠标进入菜单页切换按钮音效
+  playSeEnterSavePanelSelect: string; // 鼠标进入存档页切换按钮音效
+  playSeEnterLoadPanelSelect: string; // 鼠标进入读档页切换按钮音效
+  playSeEnterExtraElement: string; // 鼠标进入鉴赏元素音效
+  playSeEnterCloseButton: string; // 鼠标进入关闭按钮音效
+  playSeEnterDialogButton: string; // 鼠标进入提示框按钮音效
+  playSeEnterOptionSlider: string; // 鼠标进入滑块选项音效
+  playSeClick: string; // 鼠标点击音效
+  playSeClickChoose: string; // 鼠标点击分支选择音效
+  playSeClickTitleButton: string; // 鼠标点击标题按钮音效
+  playSeClickCloseButton: string; // 鼠标点击关闭按钮音效
+  playSeClickBottomControlPanelButton: string; // 鼠标点击底部控制按钮音效
+  playSeClickMenuNormalButton: string; // 鼠标点击菜单页普通按钮音效
+  playSeClickOptionSelect: string; // 鼠标点击游戏选项切换按钮音效
+  playSeClickLoadPanelSelect: string; // 鼠标点击读档页切换按钮音效
+  playSeClickSavePanelSelect: string; // 鼠标点击存档页切换按钮音效
+  playSeClickSaveElement: string; // 鼠标点击存档元素音效
+  playSeClickLoadElement: string; // 鼠标点击读档元素音效
+  playSeClickDialogButton: string; // 鼠标点击提示框按钮音效
+  playSeClickToNextBgmButton: string; // 鼠标点击下一首BGM按钮音效
+  playSeClickToLastBgmButton: string; // 鼠标点击上一首BGM按钮音效
+  playSeClickBeginBgmButton: string; // 鼠标点击开始播放BGM按钮音效
+  playSeClickStopBgmButton: string; // 鼠标点击停止播放BGM按钮音效
+  playSeClickCGPanelSelect: string; // 鼠标点击CG页切换按钮音效
+  playSeClickCGElement: string; // 鼠标点击CG元素音效
+  playSeClickBacklogJumpButton: string; // 鼠标点击日志页回溯按钮音效
 }
 
 /**

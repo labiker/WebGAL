@@ -16,6 +16,9 @@ import {
 } from '@/store/userDataInterface';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import cloneDeep from 'lodash/cloneDeep';
+import useSoundEffect from '@/hooks/useSoundEffect';
+
+const { SoundEffectObject } = useSoundEffect();
 
 const initialOptionSet = {
   slPage: 1,
@@ -29,6 +32,36 @@ const initialOptionSet = {
   uiSeVolume: 25, // UI音效音量
   textboxFont: textFont.song,
   language: language.zhCn,
+  playSeEnter: SoundEffectObject.playSeEnter, // 鼠标进入
+  playSeEnterChoose: SoundEffectObject.playSeEnterChoose, // 鼠标进入分支选择
+  playSeEnterTitleButton: SoundEffectObject.playSeEnterTitleButton, // 鼠标进入标题按钮
+  playSeEnterOptionSelect: SoundEffectObject.playSeEnterOptionSelect, // 鼠标进入游戏选项切换按钮
+  playSeEnterMenuPanelSelect: SoundEffectObject.playSeEnterMenuPanelSelect, // 鼠标进入菜单页切换按钮
+  playSeEnterSavePanelSelect: SoundEffectObject.playSeEnterSavePanelSelect, // 鼠标进入存档页切换按钮
+  playSeEnterLoadPanelSelect: SoundEffectObject.playSeEnterLoadPanelSelect, // 鼠标进入读档页切换按钮
+  playSeEnterExtraElement: SoundEffectObject.playSeEnterExtraElement, // 鼠标进入鉴赏元素
+  playSeEnterCloseButton: SoundEffectObject.playSeEnterCloseButton, // 鼠标进入关闭按钮
+  playSeEnterDialogButton: SoundEffectObject.playSeEnterDialogButton, // 鼠标进入提示框按钮
+  playSeEnterOptionSlider: SoundEffectObject.playSeEnterOptionSlider, // 鼠标进入滑块选项
+  playSeClick: SoundEffectObject.playSeClick, // 鼠标点击
+  playSeClickChoose: SoundEffectObject.playSeClickChoose, // 鼠标点击分支选择
+  playSeClickTitleButton: SoundEffectObject.playSeClickTitleButton, // 鼠标点击标题按钮
+  playSeClickCloseButton: SoundEffectObject.playSeClickCloseButton, // 鼠标点击关闭按钮
+  playSeClickBottomControlPanelButton: SoundEffectObject.playSeClickBottomControlPanelButton, // 鼠标点击底部控制按钮
+  playSeClickMenuNormalButton: SoundEffectObject.playSeClickMenuNormalButton, // 鼠标点击菜单页普通按钮
+  playSeClickOptionSelect: SoundEffectObject.playSeClickOptionSelect, // 鼠标点击游戏选项切换按钮
+  playSeClickLoadPanelSelect: SoundEffectObject.playSeClickLoadPanelSelect, // 鼠标点击读档页切换按钮
+  playSeClickSavePanelSelect: SoundEffectObject.playSeClickSavePanelSelect, // 鼠标点击存档页切换按钮
+  playSeClickSaveElement: SoundEffectObject.playSeClickSaveElement, // 鼠标点击存档元素
+  playSeClickLoadElement: SoundEffectObject.playSeClickLoadElement, // 鼠标点击读档元素
+  playSeClickDialogButton: SoundEffectObject.playSeClickDialogButton, // 鼠标点击提示框按钮
+  playSeClickToNextBgmButton: SoundEffectObject.playSeClickToNextBgmButton, // 鼠标点击下一首BGM按钮
+  playSeClickToLastBgmButton: SoundEffectObject.playSeClickToLastBgmButton, // 鼠标点击上一首BGM按钮
+  playSeClickBeginBgmButton: SoundEffectObject.playSeClickBeginBgmButton, // 鼠标点击开始播放BGM按钮
+  playSeClickStopBgmButton: SoundEffectObject.playSeClickStopBgmButton, // 鼠标点击停止播放BGM按钮
+  playSeClickCGPanelSelect: SoundEffectObject.playSeClickCGPanelSelect, // 鼠标点击CG页切换按钮
+  playSeClickCGElement: SoundEffectObject.playSeClickCGElement, // 鼠标点击CG元素
+  playSeClickBacklogJumpButton: SoundEffectObject.playSeClickBacklogJumpButton, // 鼠标点击日志页回溯按钮
 };
 
 // 初始化用户数据

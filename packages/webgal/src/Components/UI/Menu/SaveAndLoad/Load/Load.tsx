@@ -11,8 +11,7 @@ import { useTranslation } from 'react-i18next';
 import useSoundEffect from '@/hooks/useSoundEffect';
 
 export const Load: FC = () => {
-  const { playSeClickLoadPanelSelect, playSeClickLoadElement, playSeEnter, playSeEnterLoadPanelSelect } =
-    useSoundEffect();
+  const { playSe } = useSoundEffect();
   const userDataState = useSelector((state: RootState) => state.userData);
   const dispatch = useDispatch();
   const page = [];
@@ -26,9 +25,9 @@ export const Load: FC = () => {
         onClick={() => {
           dispatch(setSlPage(i));
           setStorage();
-          playSeClickLoadPanelSelect();
+          playSe('playSeClickLoadPanelSelect');
         }}
-        onMouseEnter={playSeEnterLoadPanelSelect}
+        onMouseEnter={() => playSe('playSeEnterLoadPanelSelect')}
         key={'Load_element_page' + i}
         className={classNameOfElement}
       >
@@ -86,9 +85,9 @@ export const Load: FC = () => {
       <div
         onClick={() => {
           loadGame(i);
-          playSeClickLoadElement();
+          playSe('playSeClickLoadElement');
         }}
-        onMouseEnter={playSeEnter}
+        onMouseEnter={() => playSe('playSeEnter')}
         key={'loadElement_' + i}
         className={styles.Save_Load_content_element}
         style={{ animationDelay: `${animationIndex * 30}ms` }}

@@ -30,7 +30,7 @@ export const BottomControlPanel = () => {
   const t = useTrans('gaming.');
   const strokeWidth = 2.5;
   const { i18n } = useTranslation();
-  const { playSeEnter, playSeClickBottomControlPanelButton, playSeClickCloseButton } = useSoundEffect();
+  const { playSe } = useSoundEffect();
   const lang = i18n.language;
   const isFr = lang === 'fr';
   let size = 42;
@@ -81,9 +81,9 @@ export const BottomControlPanel = () => {
               style={{ fontSize }}
               onClick={() => {
                 setComponentVisibility('showTextBox', false);
-                playSeClickBottomControlPanelButton();
+                playSe('playSeClickBottomControlPanelButton');
               }}
-              onMouseEnter={playSeEnter}
+              onMouseEnter={() => playSe('playSeEnter')}
             >
               <PreviewCloseOne
                 className={styles.button}
@@ -101,9 +101,9 @@ export const BottomControlPanel = () => {
               style={{ fontSize }}
               onClick={() => {
                 setComponentVisibility('showTextBox', true);
-                playSeClickBottomControlPanelButton();
+                playSe('playSeClickBottomControlPanelButton');
               }}
-              onMouseEnter={playSeEnter}
+              onMouseEnter={() => playSe('playSeEnter')}
             >
               <PreviewOpen
                 className={styles.button}
@@ -121,9 +121,9 @@ export const BottomControlPanel = () => {
             onClick={() => {
               setComponentVisibility('showBacklog', true);
               setComponentVisibility('showTextBox', false);
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <AlignTextLeftOne
               className={styles.button}
@@ -144,9 +144,9 @@ export const BottomControlPanel = () => {
                 VocalControl.pause();
                 VocalControl?.play();
               }
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <ReplayMusic
               className={styles.button}
@@ -163,9 +163,9 @@ export const BottomControlPanel = () => {
             style={{ fontSize }}
             onClick={() => {
               switchAuto();
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <PlayOne className={styles.button} theme="outline" size={size} fill="#f5f5f7" strokeWidth={strokeWidth} />
             <span className={styles.button_text}>{t('buttons.auto')}</span>
@@ -176,9 +176,9 @@ export const BottomControlPanel = () => {
             style={{ fontSize }}
             onClick={() => {
               switchFast();
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <DoubleRight
               className={styles.button}
@@ -194,9 +194,9 @@ export const BottomControlPanel = () => {
             style={{ fontSize }}
             onClick={() => {
               saveGame(0);
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <DoubleDown
               className={styles.button}
@@ -213,9 +213,9 @@ export const BottomControlPanel = () => {
             style={{ fontSize }}
             onClick={() => {
               loadGame(0);
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <DoubleUp className={styles.button} theme="outline" size={size} fill="#f5f5f7" strokeWidth={strokeWidth} />
             <span className={styles.button_text}>{t('buttons.quicklyLoad')}</span>
@@ -227,9 +227,9 @@ export const BottomControlPanel = () => {
             onClick={() => {
               setMenuPanel(MenuPanelTag.Save);
               setComponentVisibility('showMenuPanel', true);
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <Save className={styles.button} theme="outline" size={size} fill="#f5f5f7" strokeWidth={strokeWidth} />
             <span className={styles.button_text}>{t('buttons.save')}</span>
@@ -240,9 +240,9 @@ export const BottomControlPanel = () => {
             onClick={() => {
               setMenuPanel(MenuPanelTag.Load);
               setComponentVisibility('showMenuPanel', true);
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <FolderOpen
               className={styles.button}
@@ -259,9 +259,9 @@ export const BottomControlPanel = () => {
             onClick={() => {
               setMenuPanel(MenuPanelTag.Option);
               setComponentVisibility('showMenuPanel', true);
-              playSeClickBottomControlPanelButton();
+              playSe('playSeClickBottomControlPanelButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <SettingTwo
               className={styles.button}
@@ -277,9 +277,9 @@ export const BottomControlPanel = () => {
             style={{ fontSize }}
             onClick={() => {
               backToTitle();
-              playSeClickCloseButton();
+              playSe('playSeClickCloseButton');
             }}
-            onMouseEnter={playSeEnter}
+            onMouseEnter={() => playSe('playSeEnter')}
           >
             <Home className={styles.button} theme="outline" size={size} fill="#f5f5f7" strokeWidth={strokeWidth} />
             <span className={styles.button_text}>{t('buttons.title')}</span>

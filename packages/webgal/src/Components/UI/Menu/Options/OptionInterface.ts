@@ -14,3 +14,10 @@ export interface ISlider {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   initValue: number;
 }
+
+export interface ISelect {
+  uniqueID: string;
+  options: [] | Array<string>;
+  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  initValue: string;
+}

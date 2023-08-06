@@ -1,0 +1,11 @@
+/* 重置默认样式 */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 500px;
+  height: 50px;
+  background: transparent;
+  font-size: 100%;
+  outline: none; /* 去掉获取焦点时的外边框 */
+}

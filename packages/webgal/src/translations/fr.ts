@@ -102,6 +102,71 @@ const fr = {
             uiSeVolume: { title: 'Volume de l’interface utilisateur' },
           },
         },
+        ui: {
+          title: 'UI',
+          options: {
+            playSeEnter: { title: 'Effet sonore UI (Entrée de la souris)' },
+            playSeEnterChoose: { title: 'SE (Lorsque la souris entre dans "choisir")' },
+            playSeEnterTitleButton: { title: 'Effet sonore UI (Entrée de la souris sur le bouton du titre)' },
+            playSeEnterOptionSelect: {
+              title: 'Effet sonore UI (Entrée de la souris sur le bouton de sélection des options)',
+            },
+            playSeEnterMenuPanelSelect: {
+              title: 'Effet sonore UI (Entrée de la souris sur le bouton de sélection du panneau de menu)',
+            },
+            playSeEnterSavePanelSelect: {
+              title: 'Effet sonore UI (Entrée de la souris sur le bouton de sélection du panneau de sauvegarde)',
+            },
+            playSeEnterLoadPanelSelect: {
+              title: 'Effet sonore UI (Entrée de la souris sur le bouton de sélection du panneau de chargement)',
+            },
+            playSeEnterExtraElement: { title: "Effet sonore UI (Entrée de la souris sur l'élément supplémentaire)" },
+            playSeEnterCloseButton: { title: 'Effet sonore UI (Entrée de la souris sur le bouton de fermeture)' },
+            playSeEnterDialogButton: {
+              title: 'Effet sonore UI (Entrée de la souris sur le bouton de la boîte de dialogue)',
+            },
+            playSeEnterOptionSlider: { title: "Effet sonore UI (Entrée de la souris sur le curseur d'option)" },
+            playSeClick: { title: 'Effet sonore UI (Clic de souris)' },
+            playSeClickChoose: { title: 'Effet sonore UI (Clic de souris pour choisir)' },
+            playSeClickTitleButton: { title: 'Effet sonore UI (Clic de souris sur le bouton du titre)' },
+            playSeClickCloseButton: { title: 'Effet sonore UI (Clic de souris sur le bouton de fermeture)' },
+            playSeClickBottomControlPanelButton: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton du panneau de contrôle inférieur)',
+            },
+            playSeClickMenuNormalButton: { title: 'Effet sonore UI (Clic de souris sur le bouton normal du menu)' },
+            playSeClickOptionSelect: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton de sélection des options)',
+            },
+            playSeClickLoadPanelSelect: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton de sélection du panneau de chargement)',
+            },
+            playSeClickSavePanelSelect: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton de sélection du panneau de sauvegarde)',
+            },
+            playSeClickSaveElement: { title: "Effet sonore UI (Clic de souris sur l'élément de sauvegarde)" },
+            playSeClickLoadElement: { title: "Effet sonore UI (Clic de souris sur l'élément de chargement)" },
+            playSeClickDialogButton: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton de la boîte de dialogue)',
+            },
+            playSeClickToNextBgmButton: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton pour passer à la prochaine BGM)',
+            },
+            playSeClickToLastBgmButton: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton pour revenir à la BGM précédente)',
+            },
+            playSeClickBeginBgmButton: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton pour commencer la lecture de la BGM)',
+            },
+            playSeClickStopBgmButton: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton pour arrêter la lecture de la BGM)',
+            },
+            playSeClickCGPanelSelect: {
+              title: 'Effet sonore UI (Clic de souris sur le bouton de sélection du panneau CG)',
+            },
+            playSeClickCGElement: { title: "Effet sonore UI (Clic de souris sur l'élément CG)" },
+            playSeClickBacklogJumpButton: { title: 'Effet sonore UI (Clic de souris sur le bouton' },
+          },
+        },
         // language: {
         //   title: 'Langue',
         //   options: {

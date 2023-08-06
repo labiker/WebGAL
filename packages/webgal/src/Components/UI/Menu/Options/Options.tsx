@@ -5,6 +5,7 @@ import { useValue } from '@/hooks/useValue';
 import { System } from '@/Components/UI/Menu/Options/System/System';
 import { Display } from '@/Components/UI/Menu/Options/Display/Display';
 import { Sound } from '@/Components/UI/Menu/Options/Sound/Sound';
+import { UserInterface } from './UserInterface/UserInterface';
 import useTrans from '@/hooks/useTrans';
 import useSoundEffect from '@/hooks/useSoundEffect';
 
@@ -12,10 +13,11 @@ enum optionPage {
   'System',
   'Display',
   'Sound',
+  'UI',
 }
 
 export const Options: FC = () => {
-  const { playSeEnterOptionSelect, playSeClickOptionSelect } = useSoundEffect();
+  const { playSe } = useSoundEffect();
   const currentOptionPage = useValue(optionPage.System);
   useEffect(getStorage, []);
 
@@ -39,38 +41,49 @@ export const Options: FC = () => {
           <div
             onClick={() => {
               currentOptionPage.set(optionPage.System);
-              playSeClickOptionSelect();
+              playSe('playSeClickOptionSelect');
             }}
             className={getClassName(optionPage.System)}
-            onMouseEnter={playSeEnterOptionSelect}
+            onMouseEnter={() => playSe('playSeEnterOptionSelect')}
           >
             {t('pages.system.title')}
           </div>
           <div
             onClick={() => {
               currentOptionPage.set(optionPage.Display);
-              playSeClickOptionSelect();
+              playSe('playSeClickOptionSelect');
             }}
             className={getClassName(optionPage.Display)}
-            onMouseEnter={playSeEnterOptionSelect}
+            onMouseEnter={() => playSe('playSeEnterOptionSelect')}
           >
             {t('pages.display.title')}
           </div>
           <div
             onClick={() => {
               currentOptionPage.set(optionPage.Sound);
-              playSeClickOptionSelect();
+              playSe('playSeClickOptionSelect');
             }}
             className={getClassName(optionPage.Sound)}
-            onMouseEnter={playSeEnterOptionSelect}
+            onMouseEnter={() => playSe('playSeEnterOptionSelect')}
           >
             {t('pages.sound.title')}
+          </div>
+          <div
+            onClick={() => {
+              currentOptionPage.set(optionPage.UI);
+              playSe('playSeClickOptionSelect');
+            }}
+            className={getClassName(optionPage.UI)}
+            onMouseEnter={() => playSe('playSeEnterOptionSelect')}
+          >
+            {t('pages.ui.title')}
           </div>
         </div>
         <div className={styles.Options_main_content}>
           {currentOptionPage.value === optionPage.Display && <Display />}
           {currentOptionPage.value === optionPage.System && <System />}
           {currentOptionPage.value === optionPage.Sound && <Sound />}
+          {currentOptionPage.value === optionPage.UI && <UserInterface />}
         </div>
       </div>
     </div>

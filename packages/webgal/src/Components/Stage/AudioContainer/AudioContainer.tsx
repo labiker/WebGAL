@@ -3,6 +3,7 @@ import { RootState, webgalStore } from '@/store/store';
 import { setStage } from '@/store/stageReducer';
 import { useEffect } from 'react';
 import { logger } from '@/Core/util/etc/logger';
+import { IOptionData } from '@/store/userDataInterface';
 
 export const AudioContainer = () => {
   const stageStore = useSelector((webgalStore: RootState) => webgalStore.stage);
@@ -75,7 +76,7 @@ export const AudioContainer = () => {
   useEffect(() => {
     if (uiSoundEffects === '') return;
     const uiSeAudioElement = document.createElement('audio');
-    uiSeAudioElement.src = uiSoundEffects;
+    uiSeAudioElement.src = userDataState.optionData[uiSoundEffects as keyof IOptionData] as string;
     uiSeAudioElement.loop = false;
     uiSeAudioElement.volume = uiSeVol;
     uiSeAudioElement.play();

@@ -28,128 +28,77 @@ import water_drop_sound from '@/assets/se/water-drop-sound.wav';
 
 // 调用音效
 const useSoundEffect = () => {
-  const playSeEnter = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: mouseEnterSE }));
+  const SoundEffectObject = {
+    playSeEnter: mouseEnterSE,
+    playSeEnterChoose: Motion_Pop03_1,
+    playSeEnterTitleButton: Motion_Pop03_2,
+    playSeEnterOptionSelect: Motion_Pop03_3,
+    playSeEnterMenuPanelSelect: Motion_Pop03_4,
+    playSeEnterSavePanelSelect: Motion_Pop03_4,
+    playSeEnterLoadPanelSelect: Motion_Pop03_4,
+    playSeEnterExtraElement: Motion_Pop08_1,
+    playSeEnterCloseButton: Motion_Pop08_2,
+    playSeEnterDialogButton: Motion_Pop08_3,
+    playSeEnterOptionSlider: Motion_Pop08_4,
+    playSeClick: maou_se_system40,
+    playSeClickChoose: maou_se_system48,
+    playSeClickTitleButton: maou_se_system39,
+    playSeClickCloseButton: button_16,
+    playSeClickBottomControlPanelButton: button_20,
+    playSeClickMenuNormalButton: button_50,
+    playSeClickOptionSelect: switch_1,
+    playSeClickLoadPanelSelect: page_flip_1,
+    playSeClickSavePanelSelect: page_flip_1,
+    playSeClickSaveElement: button_50,
+    playSeClickLoadElement: button_50,
+    playSeClickDialogButton: click_soft_02,
+    playSeClickToNextBgmButton: switch_1,
+    playSeClickToLastBgmButton: switch_1,
+    playSeClickBeginBgmButton: pausestart,
+    playSeClickStopBgmButton: pause,
+    playSeClickCGPanelSelect: page_flip_1,
+    playSeClickCGElement: button_50,
+    playSeClickBacklogJumpButton: s_cheremisinov_Click_03,
   };
-  const playSeEnterChoose = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop08_1 }));
+
+  const SoundEffectArray = () => {
+    return [
+      mouseEnterSE,
+      maou_se_system35,
+      maou_se_system39,
+      maou_se_system40,
+      maou_se_system41,
+      maou_se_system48,
+      Motion_Pop03_1,
+      Motion_Pop03_2,
+      Motion_Pop03_3,
+      Motion_Pop03_4,
+      Motion_Pop08_1,
+      Motion_Pop08_2,
+      Motion_Pop08_3,
+      Motion_Pop08_4,
+      button_16,
+      button_20,
+      button_50,
+      click_soft_02,
+      Book_Page_Flip,
+      page_flip_1,
+      pause,
+      pausestart,
+      s_cheremisinov_Click_03,
+      switch_1,
+      water_drop_sound,
+    ];
   };
-  const playSeEnterTitleButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop08_3 }));
-  };
-  const playSeEnterOptionSelect = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop08_4 }));
-  };
-  const playSeEnterMenuPanelSelect = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop08_2 }));
-  };
-  const playSeEnterSavePanelSelect = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop03_1 }));
-  };
-  const playSeEnterLoadPanelSelect = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop03_1 }));
-  };
-  const playSeEnterExtraElement = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop03_2 }));
-  };
-  const playSeEnterCloseButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop03_3 }));
-  };
-  const playSeEnterDialogButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Motion_Pop03_4 }));
-  };
-  const playSeEnterOptionSlider = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: water_drop_sound }));
-  };
-  const playSeClick = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: maou_se_system39 }));
-  };
-  const playSeClickChoose = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: maou_se_system41 }));
-  };
-  const playSeClickTitleButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: maou_se_system40 }));
-  };
-  const playSeClickCloseButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: button_16 }));
-  };
-  const playSeClickBottomControlPanelButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: button_20 }));
-  };
-  const playSeClickMenuNormalButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: button_50 }));
-  };
-  const playSeClickOptionSelect = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: switch_1 }));
-  };
-  const playSeClickLoadPanelSelect = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: page_flip_1 }));
-  };
-  const playSeClickSavePanelSelect = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: page_flip_1 }));
-  };
-  const playSeClickSaveElement = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: maou_se_system48 }));
-  };
-  const playSeClickLoadElement = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: maou_se_system48 }));
-  };
-  const playSeClickDialogButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: maou_se_system35 }));
-  };
-  const playSeClickToNextBgmButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: switch_1 }));
-  };
-  const playSeClickToLastBgmButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: switch_1 }));
-  };
-  const playSeClickBeginBgmButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: pausestart }));
-  };
-  const playSeClickStopBgmButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: pause }));
-  };
-  const playSeClickCGPanelSelect = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: Book_Page_Flip }));
-  };
-  const playSeClickCGElement = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: s_cheremisinov_Click_03 }));
-  };
-  const playSeClickBacklogJumpButton = () => {
-    webgalStore.dispatch(setStage({ key: 'uiSe', value: click_soft_02 }));
+
+  const playSe = (seName: string) => {
+    webgalStore.dispatch(setStage({ key: 'uiSe', value: seName }));
   };
 
   return {
-    playSeEnter, // 鼠标进入
-    playSeEnterChoose, // 鼠标进入分支选择
-    playSeEnterTitleButton, // 鼠标进入标题按钮
-    playSeEnterOptionSelect, // 鼠标进入游戏选项切换按钮
-    playSeEnterMenuPanelSelect, // 鼠标进入菜单页切换按钮
-    playSeEnterSavePanelSelect, // 鼠标进入存档页切换按钮
-    playSeEnterLoadPanelSelect, // 鼠标进入读档页切换按钮
-    playSeEnterExtraElement, // 鼠标进入鉴赏元素
-    playSeEnterCloseButton, // 鼠标进入关闭按钮
-    playSeEnterDialogButton, // 鼠标进入提示框按钮
-    playSeEnterOptionSlider, // 鼠标进入滑块选项
-    playSeClick, // 鼠标点击
-    playSeClickChoose, // 鼠标点击分支选择
-    playSeClickTitleButton, // 鼠标点击标题按钮
-    playSeClickCloseButton, // 鼠标点击关闭按钮
-    playSeClickBottomControlPanelButton, // 鼠标点击底部控制按钮
-    playSeClickMenuNormalButton, // 鼠标点击菜单页普通按钮
-    playSeClickOptionSelect, // 鼠标点击游戏选项切换按钮
-    playSeClickLoadPanelSelect, // 鼠标点击读档页切换按钮
-    playSeClickSavePanelSelect, // 鼠标点击存档页切换按钮
-    playSeClickSaveElement, // 鼠标点击存档元素
-    playSeClickLoadElement, // 鼠标点击读档元素
-    playSeClickDialogButton, // 鼠标点击提示框按钮
-    playSeClickToNextBgmButton, // 鼠标点击下一首BGM按钮
-    playSeClickToLastBgmButton, // 鼠标点击上一首BGM按钮
-    playSeClickBeginBgmButton, // 鼠标点击开始播放BGM按钮
-    playSeClickStopBgmButton, // 鼠标点击停止播放BGM按钮
-    playSeClickCGPanelSelect, // 鼠标点击CG页切换按钮
-    playSeClickCGElement, // 鼠标点击CG元素
-    playSeClickBacklogJumpButton, // 鼠标点击日志页回溯按钮
+    SoundEffectObject, // 音效列表 对象
+    SoundEffectArray, // 音效列表 数组
+    playSe, // 播放音效
   };
 };
 

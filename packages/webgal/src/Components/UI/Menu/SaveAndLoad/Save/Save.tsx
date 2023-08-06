@@ -11,8 +11,7 @@ import { useTranslation } from 'react-i18next';
 import useSoundEffect from '@/hooks/useSoundEffect';
 
 export const Save: FC = () => {
-  const { playSeClickSavePanelSelect, playSeClickSaveElement, playSeEnter, playSeEnterSavePanelSelect } =
-    useSoundEffect();
+  const { playSe } = useSoundEffect();
   const userDataState = useSelector((state: RootState) => state.userData);
   const dispatch = useDispatch();
   const page = [];
@@ -26,9 +25,9 @@ export const Save: FC = () => {
         onClick={() => {
           dispatch(setSlPage(i));
           setStorage();
-          playSeClickSavePanelSelect();
+          playSe('playSeClickSavePanelSelect');
         }}
-        onMouseEnter={playSeEnterSavePanelSelect}
+        onMouseEnter={() => playSe('playSeEnterSavePanelSelect')}
         key={'Save_element_page' + i}
         className={classNameOfElement}
       >
@@ -83,7 +82,7 @@ export const Save: FC = () => {
     const saveElement = (
       <div
         onClick={() => {
-          playSeClickSaveElement();
+          playSe('playSeClickSaveElement');
           if (userDataState.saveData[i]) {
             showGlogalDialog({
               title: t('saving.isOverwrite'),
@@ -99,7 +98,7 @@ export const Save: FC = () => {
             saveGame(i);
           }
         }}
-        onMouseEnter={playSeEnter}
+        onMouseEnter={() => playSe('playSeEnter')}
         key={'saveElement_' + i}
         className={styles.Save_Load_content_element}
         style={{ animationDelay: `${animationIndex * 30}ms` }}
