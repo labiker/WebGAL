@@ -14,11 +14,12 @@ export const TextBox = () => {
   useEffect(() => {});
   const textDelay = useTextDelay(userDataState.optionData.textSpeed);
   const textDuration = useTextAnimationDuration(userDataState.optionData.textSpeed);
-  const size = getTextSize(userDataState.optionData.textSize) + '%';
+  let size = getTextSize(userDataState.optionData.textSize) + '%';
   const font = useFontFamily();
-
   const isText = stageState.showText !== '' || stageState.showName !== '';
-
+  if (isText && stageState.showTextSize !== -1) {
+    size = getTextSize(stageState.showTextSize) + '%';
+  }
   // 拆字
   const textArray: Array<string> = splitChars(stageState.showText);
   const textElementList = textArray.map((e, index) => {
@@ -66,7 +67,11 @@ export const TextBox = () => {
   return (
     <>
       {isText && (
-        <div id="textBoxMain" className={styles.TextBox_main} style={{ fontFamily: font }}>
+        <div
+          id="textBoxMain"
+          className={styles.TextBox_main}
+          style={{ fontFamily: font, left: stageState.miniAvatar === '' ? 25 : undefined }}
+        >
           {/* <div className={styles.nameContainer}>{stageState.showName !== ''}</div> */}
           <div id="miniAvatar" className={styles.miniAvatarContainer}>
             {stageState.miniAvatar !== '' && (
